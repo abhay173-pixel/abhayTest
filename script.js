@@ -1,5 +1,11 @@
 
-function toggleMenu() {
+document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.querySelector('.menu-toggle');
   const navLinks = document.getElementById('nav-links');
-  navLinks.classList.toggle('show');
-}
+
+  if (toggle && navLinks) {
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  }
+});
